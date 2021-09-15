@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 1 Entregable</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3404ee6456.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <main>
+
+        <section class="toolbar-section">
+            <!-- btn lápiz -->
+            <button id="btn-pen" title="Draw" style="background: black;"><i class="fas fa-pen"></i></button>
+            <!-- tamaño lápiz / goma -->
+            <input type="range" id="pen-thickness" min="1" max="5" value="1">
+            <!-- btn goma de borrar -->
+            <button id="btn-erase" title="Erase"><i class="fas fa-eraser"></i></button>
+            <!-- color picker -->
+            <input id="btn-color" type="color" title="Color"></input>
+            <!-- btn guardar -->
+            <button id="btn-save" title="Save"><i class="fas fa-save"></i></button>
+            <!-- btn limpiar canvas -->
+            <button id="btn-newCanvas" title="Clear"><i class="far fa-file"></i></button>
+            <!-- select filtros -->
+            <select name="" id="filter-select" title="Filters">
+                <option value="none" selected disabled hidden id="default-option">Filtros</option>
+                <option value="negativo">Negativo</option>
+                <option value="brillo">Brillo</option>
+                <option value="binarizacion">Binarización</option>
+                <option value="sepia">Sepia</option>
+                <option value="escala-grises">Escala de grises</option>
+                <option value="saturacion">Saturacion</option>
+                <option value="blur">Desenfoque Gaussiano</option>
+                <option value="bordes-sobel">Borde Sobel</option>
+                <option value="bordes-horizontal-blanco">Borde Horizontal Blanco</option>
+                <option value="bordes-horizontal-negro">Borde Horizontal Negro</option>
+                <option value="bordes-vertical-blanco">Borde Vertical Blanco</option>
+                <option value="bordes-vertical-negro">Borde Vertical Negro</option>
+            </select>
+            <!-- btn subir imagen -->
+            <label class="custom-file-upload" title="Image">
+                <input id="input-local-img" type="file"/><i class="fas fa-image"></i>
+            </label>           
+
+        </section>
+
+        <section class="canvas-section">
+            <canvas id="canvas"></canvas>
+        </section>
+
+    </main>
+    
+</body>
+</html>
